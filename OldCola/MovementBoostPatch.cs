@@ -7,7 +7,7 @@ using Scp207 = InventorySystem.Items.Usables.Scp207;
 namespace OldCola;
 
 [HarmonyPatch(typeof(Scp207), nameof(Scp207.OnEffectsActivated))]
-public class Scp207Effect
+public class MovementBoostPatch
 {
     public static void Postfix(Scp207 __instance)
     {
