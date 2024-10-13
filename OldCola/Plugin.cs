@@ -27,6 +27,7 @@ namespace OldCola
             Instance = this;
             _harmony.PatchAll();
             Exiled.Events.Handlers.Player.Hurting += EventHandlers.Hurting;
+            Exiled.Events.Handlers.Player.UsingItemCompleted += EventHandlers.UsingItemCompleted;
         }
 
         public override void OnDisabled()
@@ -35,6 +36,7 @@ namespace OldCola
             Instance = null;
             _harmony.UnpatchAll();
             Exiled.Events.Handlers.Player.Hurting -= EventHandlers.Hurting;
+            Exiled.Events.Handlers.Player.UsingItemCompleted -= EventHandlers.UsingItemCompleted;
         }
     }
 }
